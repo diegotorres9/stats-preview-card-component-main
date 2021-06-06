@@ -35,9 +35,9 @@ html {
   body {
       background-color: var(--main-background);
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
   }
 .content {
     display: flex;
@@ -47,10 +47,17 @@ html {
     background-color: var(--card-background);
     margin: 88px 24px;
     border-radius: 8px;
+    width: 327px;
+    height: 780px;
 }
 .content img {
-    margin-bottom: 40px;
     border-radius: 8px 8px 0 0;
+    margin-bottom: 40px;
+    /* background-color: var(--accent); */
+    /* background: linear-gradient(170, 92, 219, 0.85), linear-gradient(170, 92, 219, 0.85); */
+    /* -webkit-filter: invert(48%) sepia(32%) saturate(1227%) hue-rotate(232deg) brightness(89%) contrast(92%);
+            filter: invert(0%) sepia(55%) saturate(1300%) hue-rotate(250deg) brightness(100%) contrast(100%); */
+    /* background: linear-gradient(to bottom, rgba(170, 92, 219, 0.85)); */
 }
 .content h1 {
     margin: 0 31.5px 40px 32.5px;
@@ -99,10 +106,47 @@ h1 span {
 }
 
 /* LARGE SCREEN STYLING */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1100px) {
     .content {
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
         margin: 177px 165px;
+        width: 1100px;
+        height: 446px;
+    }
+    .content img {
+        width: 540px;
+        margin: 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .stats-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 72px;
+    }
+    .stats-content h1 {
+        font-size: 36px;
+        text-align: left;
+        margin: 72px 95px 0 0;
+    }
+    .stats-content p {
+        text-align: left;
+        margin: 25px 124.5px 72px 0;
+    }
+    .stats-content ul {
+        display: flex;
+        flex-direction: row;
+        align-self: flex-start;
+        margin-right: 148px;
+    }
+    .stats-content ul li:nth-child(2), li:nth-child(3) {
+        margin: 0;
+    }
+    .stats-content ul li:nth-child(2) {
+        margin: 0 65px;
     }
 }
